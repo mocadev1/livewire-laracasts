@@ -12,6 +12,6 @@
     
     {{ now() }}
     
-    <button wire:click="refreshChildren">Refresh Children</button>
+    <button wire:click="$emit('refreshChildren')">Refresh Children</button>
 
 </div>

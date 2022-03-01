@@ -15,11 +15,6 @@ class HelloWorld extends Component
         $this->contacts = Contact::all();
     }
 
-    public function refreshChildren()
-    {
-        $this->emit('refreshChildren');
-    }
-
     public function render()
     {
         return view('livewire.hello-world');
