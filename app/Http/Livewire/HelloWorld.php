@@ -15,19 +15,9 @@ class HelloWorld extends Component
         $this->contacts = Contact::all();
     }
 
-    public function removeContact($id)
+    public function refreshChildren()
     {
-        
-        // Deleting with eloquent
-        $deletedContact = Contact::whereId($id)->first()->delete();
-        // dump($deletedContact);
-
-        // Saving the new set of contacts to show it on the list
-        $this->contacts = Contact::all();
-    }
-
-    public function updated()
-    {
+        $this->emit('refreshChildren');
     }
 
     public function render()
